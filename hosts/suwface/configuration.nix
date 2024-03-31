@@ -190,6 +190,7 @@
      #S
      sbctl
      #T
+     tailscale
      #U
      #V
      #W

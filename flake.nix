@@ -25,7 +25,7 @@
         specialArgs = {inherit inputs;};
 	system = "x86_64-linux";
 	modules = [
-	  ./configuration.nix
+	  ./hosts/suwface/configuration.nix
 	 inputs.nixos-hardware.nixosModules.microsoft-surface-pro-intel
 	 inputs.nix-gaming.nixosModules.pipewireLowLatency
 	 inputs.home-manager.nixosModules.default
@@ -36,6 +36,7 @@
         specialArgs = { inherit inputs; };
 	system = "x86_64-linux";
 	modules = [
+	  ./hosts/nyixie/configuration.nix
 	  inputs.nix-gaming.nixosModules.default
 	  inputs.home-manager.nixosModules.default
 	];

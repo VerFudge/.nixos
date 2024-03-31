@@ -30,7 +30,16 @@
 	 inputs.nix-gaming.nixosModules.pipewireLowLatency
 	 inputs.home-manager.nixosModules.default
 	];
-      }; 
-    };
+      };
+
+      nyixie = lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+	system = "x86_64-linux";
+	modules = [
+	  inputs.nix-gaming.nixosModules.default
+	  inputs.home-manager.nixosModules.default
+	];
+      };
+    };  
   };
 }
